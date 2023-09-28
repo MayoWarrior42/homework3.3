@@ -8,21 +8,14 @@ private:
 public:
     Counter()
     {
-        num = 0;
+        num = 1;
     }
 
     Counter(int num1) {
-        set_num(num1);
+       num = num1;
     }
 
-    void set_num(int num1) {
-        num = num1;
-    }
-    void set_num() {
-        std::cout << "\nВведите начальное значение счетчика: ";
-        std::cin >> num;
-        this->num;
-    }
+
     void inc() {
         num++;
     }
@@ -50,11 +43,11 @@ int main()
     if (val == "да") {
         std::cout << "\nВведите значение: " << "\n";
         std::cin >> num;
-        count.set_num(num);
+        Counter coun(num);
+        count = coun;
     }
-    else if (val == "нет") {
-        Counter();
-    }
+
+
 
     while (input != 'х'){
     std::cout << "\nВведите команду ('+', '-', '=' или 'x'): ";
